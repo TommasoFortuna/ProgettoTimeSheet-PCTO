@@ -1,15 +1,19 @@
 package com.fortuna.ProgettoTimeSheet;
 
+import java.sql.Date;
+
 public class Commessa {
 
     private String C_AZN;
     private String C_COM;
     private String T_COM;
+    private Date D_INS;
 
-    public Commessa(String c_AZN, String c_COM, String t_COM) {
-        C_AZN = c_AZN;
-        C_COM = c_COM;
-        T_COM = t_COM;
+    public Commessa(String c_AZN, String c_COM, String t_COM, Date d_INS) {
+        this.C_AZN = c_AZN;
+        this.C_COM = c_COM;
+        this.T_COM = t_COM;
+        this.D_INS = d_INS;
     }
 
     public String getC_AZN() {
@@ -36,9 +40,17 @@ public class Commessa {
         T_COM = t_COM;
     }
 
+    public Date getD_INS() {
+        return D_INS;
+    }
+
+    public void setD_INS(Date d_INS) {
+        D_INS = d_INS;
+    }
+    
     @Override
     public String toString() {
-        return "Element [C_AZN=" + C_AZN + ", C_COM=" + C_COM + ", T_COM=" + T_COM + "]";
+        return "Element [C_AZN=" + C_AZN + ", C_COM=" + C_COM + ", T_COM=" + T_COM + ", D_INS=" + D_INS + "]";
     }
 
     
